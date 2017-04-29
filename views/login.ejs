@@ -1,0 +1,25 @@
+<% include partials/header %>
+
+<div class="container">
+    <h1 style="text-align: center;">Login to Yelpcamp</h1>
+    <h4 style="text-align: center;">New user? Signup <a href="/register">here</a></h4>
+    <div style="width: 30%; margin: 10px auto;">
+        <div class="row">
+            <form action="/login" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="username" autofocus="autofocus" placeholder="username">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="password" name="password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-large btn-default btn-block btn-primary">Login</button>
+                </div>
+        </div>
+        <a href="/campgrounds">Back To Campgrounds</a>
+    </div>
+    
+</div>
+
+
+<% include partials/footer %>

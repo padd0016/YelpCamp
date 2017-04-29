@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Yelpcamp</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+	<link rel="stylesheet" href="/slider.css"></link>
+	<!--Needs the slash!! that tells it to look in the root dir -->
+	<!--AND, it only works if we load that app.css AFTER Bootstrap. -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+	
+</head>
+<body>
+
+<!--Ditched the NavBar -->
+
+<div class="container">
+    <% if(success && success.length > 0){ %>
+    <div class="alert alert-success" role="alert"><%= success %></div>
+    <% } %>
+    <% if(error && error.length > 0){ %>
+    <div class="alert alert-danger" role="alert"><%= error %></div>
+    <% } %>
+</div>
+

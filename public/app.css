@@ -1,0 +1,30 @@
+body {
+    background: rgb(240, 240, 240);
+    /*color: red;*/
+}
+
+#delete-form {
+    display: inline;
+}
+
+.thumbnail img {
+    /*images inside thumbnails*/
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 0;
+    /*This is personal preference; we could leave a padding, or just change specific classes/IDs*/
+}
+
+.caption-full {
+    padding: 9px;
+}
+
+.price {
+    width: 140px;
+}
+
+/*input[type=number]{*/
+/*    width: 80px;*/
+/*} */

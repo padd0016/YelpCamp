@@ -1,0 +1,42 @@
+<% include ../partials/header %>
+<h2 class="text-center">Add a new campground here.</h2>
+
+
+<p></p>
+
+<div class="container">
+    <div style="width: 30%; margin: 10px auto;">
+        <div class="row">
+            <form action="/campgrounds" method="POST">
+                <div class="form-group">
+                    <!--This Bootstrap class gives us nice spacing-->
+                    <input class="form-control" type="text" name="name" placeholder="name">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="image" placeholder="image">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="description" placeholder="Enter Description">
+                </div>
+                <div class="form-group">
+                    <input class="price form-control" type="number" name="price" placeholder="Price per night" min="0" step="1">
+                    <!--Price input is number, but we'll store as a string to preserve formatting-->
+                    <!--Min gives us a minimum, and step gives us up/down arrows. We could do 0.01-->
+                </div>                
+                <div class="form-group">
+                    <button class="btn btn-large btn-default btn-block btn-primary">Submit!</button>
+                </div>
+                
+                
+                
+                <!--btn-block is a Bootstrap way of making it a block element-->
+            </form>
+            <p></p>
+            <a href="/campgrounds"><strong>Back to Campgrounds</strong></a>
+        </div>
+    </div>
+</div>
+
+
+
+<% include ../partials/footer %>

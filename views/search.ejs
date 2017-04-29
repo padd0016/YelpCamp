@@ -1,0 +1,25 @@
+<% include partials/header %>
+<h1>Search the OMDB Movie Database</h1>
+<h2>created with app.render</h2>
+<img width=300 src="http://ia.media-imdb.com/images/M/MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE@._V1_.png"></img>
+
+
+
+<form action="/searchDB" method="POST">
+    <input type="text" name="searchText" placeholder="Enter searching stuff"></input>
+    <label for="yearPicker">Year (optional): </label>
+    <input type="number" name="searchYear" id="yearPicker" min="1800" max="2020" step="1" placeholder="year" />
+    <button>Search OMDB</button>
+</form>
+
+<ul>
+    <% for (i=0; i<resultsArray.length; i++){ %>
+    <li>Here's a movie: <%=resultsArray[i]["Title"] %>.</li>
+    <ul>
+        <li>Released in <%=resultsArray[i]["Year"] %>.</li>
+        <li> <a href="http://www.imdb.com/title/<%=resultsArray[i]["imdbID"]%>"><img width=100 src=<%=resultsArray[i]["Poster"] %>></a> </img></li>
+    </ul>
+    <% }; %>
+</ul>
+
+<% include partials/footer %>
